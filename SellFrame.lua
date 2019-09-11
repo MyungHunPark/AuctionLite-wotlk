@@ -631,7 +631,6 @@ end
 -- Mouse has left a row in the scrolling frame.
 function AuctionLite:SellButton_OnLeave(widget)
   GameTooltip:Hide();
-  BattlePetTooltip:Hide();
 end
 
 -- Handles clicks on "Remember" button.

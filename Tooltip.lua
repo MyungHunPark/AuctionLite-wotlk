@@ -386,19 +386,11 @@ function AuctionLite:SetAuctionLiteTooltip(widget, shift, link, count)
     else
       assert(false);
     end
-    if self:IsBattlePetLink(link) then
-      local _, speciesId, level, breedQuality, maxHealth, power, speed, name =
-        strsplit(":", link);
-      BattlePetToolTip_Show(tonumber(speciesId), tonumber(level),
-                            tonumber(breedQuality), tonumber(maxHealth),
-                            tonumber(power), tonumber(speed), name);
-    else
-      GameTooltip:SetHyperlink(link);
-      if GameTooltip:NumLines() > 0 then
-        self:AddTooltipData(GameTooltip, link, count);
-      end
-      self:SetHyperlinkTooltips(true);
+    GameTooltip:SetHyperlink(link);
+    if GameTooltip:NumLines() > 0 then
+      self:AddTooltipData(GameTooltip, link, count);
     end
+    self:SetHyperlinkTooltips(true);
   end
 end
 
@@ -426,7 +418,7 @@ end
 function AuctionLite:AddHooksToTooltip(tooltip)
   self:SecureHook(tooltip, "SetBagItem", "BagTooltip");
   self:SecureHook(tooltip, "SetInventoryItem", "InventoryTooltip");
-  self:SecureHook(tooltip, "SetGuildBankItem", "GuildBankTooltip");
+--  self:SecureHook(tooltip, "SetGuildBankItem", "GuildBankTooltip");
   --self:SecureHook(tooltip, "SetTradeSkillItem", "TradeSkillTooltip");
   self:SecureHook(tooltip, "SetMerchantItem", "MerchantTooltip");
   self:SecureHook(tooltip, "SetBuybackItem", "BuybackTooltip");

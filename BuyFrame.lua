@@ -1368,7 +1368,6 @@ end
 -- Mouse has left a row in the scrolling frame.
 function AuctionLite:BuyButton_OnLeave(widget)
   GameTooltip:Hide();
-  BattlePetTooltip:Hide();
 end
 
 -- Click the advanced menu button.
@@ -1496,7 +1495,6 @@ end
 -- Hide the cancel tooltip.
 function AuctionLite:BuyCancelAuctionButton_OnLeave(widget)
   GameTooltip:Hide();
-  BattlePetTooltip:Hide();
 end
 
 -- Starts a full scan of the auction house.

@@ -36,11 +36,6 @@ function AuctionLite:CountItems(targetLink)
         end
       end
     end
-
-    -- Battle pets can only be sold one at a time, so cap this count at one.
-    if total > 0 and self:IsBattlePetLink(targetLink) then
-      total = 1;
-    end
   end
 
   return total;

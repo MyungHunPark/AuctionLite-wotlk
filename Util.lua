@@ -105,11 +105,6 @@ function AuctionLite:IsLink(str)
   return (str:find(LinkRegexp) ~= nil);
 end
 
--- Is this link a battle pet link?
-function AuctionLite:IsBattlePetLink(link)
-  return strmatch(link, "|Hbattlepet:");
-end
-
 -- Dissect an item link or item string.
 function AuctionLite:SplitLink(link)
   -- Parse the link.
@@ -149,10 +144,6 @@ end
 -- Zero out the suffixId field from an item link, and also replace the name with the un-suffixed name.
 function AuctionLite:RemoveSuffix(link)
   if link ~= nil then
-    if AuctionLite:IsBattlePetLink(link) then
-      return link
-    end
-    
     local name, _, id = AuctionLite:SplitLink(link)
     local baseName = GetItemInfo(id)
     return link:gsub(
