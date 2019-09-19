@@ -38,12 +38,12 @@ function AuctionLite:AuctionFrameTab_OnClick_Hook(tab, arg)
     AuctionFrameBuy:Show();
     BuyName:SetFocus();
   elseif index == SellTabIndex then
-    AuctionFrameTopLeft:SetTexture("Interface\\AddOns\\AuctionLite\\Images\\SellFrame-TopLeft");
-    AuctionFrameTop:SetTexture("Interface\\AddOns\\AuctionLite\\Images\\SellFrame-Top");
-    AuctionFrameTopRight:SetTexture("Interface\\AddOns\\AuctionLite\\Images\\SellFrame-TopRight");
-    AuctionFrameBotLeft:SetTexture("Interface\\AddOns\\AuctionLite\\Images\\SellFrame-BotLeft");
-    AuctionFrameBot:SetTexture("Interface\\AddOns\\AuctionLite\\Images\\SellFrame-Bot");
-    AuctionFrameBotRight:SetTexture("Interface\\AddOns\\AuctionLite\\Images\\SellFrame-BotRight");
+    AuctionFrameTopLeft:SetTexture("Interface\\AddOns\\AuctionLite-classic\\Images\\SellFrame-TopLeft");
+    AuctionFrameTop:SetTexture("Interface\\AddOns\\AuctionLite-classic\\Images\\SellFrame-Top");
+    AuctionFrameTopRight:SetTexture("Interface\\AddOns\\AuctionLite-classic\\Images\\SellFrame-TopRight");
+    AuctionFrameBotLeft:SetTexture("Interface\\AddOns\\AuctionLite-classic\\Images\\SellFrame-BotLeft");
+    AuctionFrameBot:SetTexture("Interface\\AddOns\\AuctionLite-classic\\Images\\SellFrame-Bot");
+    AuctionFrameBotRight:SetTexture("Interface\\AddOns\\AuctionLite-classic\\Images\\SellFrame-BotRight");
     AuctionFrameSell:Show();
   end
 end
