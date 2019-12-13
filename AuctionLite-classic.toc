@@ -1,8 +1,8 @@
-## Interface: 11302
+## Interface: 11303
 ## Title: AuctionLite-classic
 ## Notes: A lightweight addon that tracks auction house data and improves the auction house interface.
 ## Author: merial.kilrogg@gmail.com
-## Version: 1.1
+## Version: 1.1a
 ## OptionalDeps: Ace3
 ## SavedVariables: AuctionLiteDB
 ## X-Category: Interface Enhancements
