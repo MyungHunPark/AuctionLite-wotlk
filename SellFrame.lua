@@ -444,7 +444,7 @@ function AuctionLite:ClearSellFrame()
 
   ChangedSize = 0;
 
-  SellItemButton:SetNormalTexture(nil);
+  SellItemButton:SetNormalTexture("");
   SellItemButtonName:SetText("");
   SellItemButtonCount:Hide();
 
