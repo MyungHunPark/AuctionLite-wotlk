@@ -225,8 +225,8 @@ end
 -- Add data to bag item tooltips.
 function AuctionLite:BagTooltip(tooltip, bag, slot)
   if tooltip:NumLines() > 0 then
-    local link = GetContainerItemLink(bag, slot);
-    local _, count = GetContainerItemInfo(bag, slot);
+    local link = C_Container.GetContainerItemLink(bag, slot);
+    local _, count = C_Container.GetContainerItemInfo(bag, slot);
     self:AddTooltipData(tooltip, link, count);
   end
 end
