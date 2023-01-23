@@ -145,7 +145,7 @@ end
 function AuctionLite:RemoveSuffix(link)
   if link ~= nil then
     local name, _, id = AuctionLite:SplitLink(link)
-    local baseName = GetItemInfo(id)
+    local baseName = C_Container.GetItemInfo(id)
     return link:gsub(
         -- Fields: itemID, enchant, gem1, gem2, gem3, gem4.
         "(Hitem:%-?%d*:%-?%d*:%-?%d*:%-?%d*:%-?%d*:%-?%d*)" ..
@@ -174,12 +174,12 @@ function AuctionLite:GetAuctionSellItemInfoAndLink()
 
     -- Look through the bags to find a matching item.
     for i = 0, 4 do
-      local numItems = GetContainerNumSlots(i);
+      local numItems = C_Container.GetContainerNumSlots(i);
       for j = 1, numItems do
-        local _, curCount, locked = GetContainerItemInfo(i, j);
+        local _, curCount, locked = C_Container.GetContainerItemInfo(i, j);
         if count == curCount and locked then
           -- We've found a partial match.  Now check the name...
-          local curLink = GetContainerItemLink(i, j);
+          local curLink = C_Container.GetContainerItemLink(i, j);
           local curName = self:SplitLink(curLink);
           if name == curName then
             if link == nil then
@@ -203,7 +203,7 @@ end
 
 -- Get the maximum stack size for an item.
 function AuctionLite:GetMaxStackSize(link)
-  local _, _, _, _, _, _, _, maxSize = GetItemInfo(link);
+  local _, _, _, _, _, _, _, maxSize = C_Container.GetItemInfo(link);
   if maxSize == nil then
     maxSize = 1;
   end
