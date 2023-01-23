@@ -27,12 +27,12 @@ function AuctionLite:CountItems(targetLink)
   if targetLink ~= nil then
     local i, j;
     for i = 0, 4 do
-      local numItems = GetContainerNumSlots(i);
+      local numItems = C_Container.GetContainerNumSlots(i);
       for j = 1, numItems do
-        local link = self:RemoveUniqueId(GetContainerItemLink(i, j));
+        local link = self:RemoveUniqueId(C_Container.GetContainerItemLink(i, j));
         if link == targetLink then
-          local _, count = GetContainerItemInfo(i, j);
-          total = total + count;
+          local info = C_Container.GetContainerItemInfo(i, j);
+          total = total + info.stackCount;
         end
       end
     end

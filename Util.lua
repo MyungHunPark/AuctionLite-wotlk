@@ -107,6 +107,10 @@ end
 
 -- Dissect an item link or item string.
 function AuctionLite:SplitLink(link)
+  if link == nil then
+    return;
+  end
+
   -- Parse the link.
   local _, _, color, str, name = link:find(LinkRegexp);
 
@@ -170,26 +174,28 @@ function AuctionLite:GetAuctionSellItemInfoAndLink()
   local slot = nil;
 
   if name ~= nil then
-    local i, j;
+    local bag, j;
 
     -- Look through the bags to find a matching item.
-    for i = 0, 4 do
-      local numItems = GetContainerNumSlots(i);
+    for bag= 0, 4 do
+      local numItems = C_Container.GetContainerNumSlots(bag) or 0;
       for j = 1, numItems do
-        local _, curCount, locked = GetContainerItemInfo(i, j);
-        if count == curCount and locked then
-          -- We've found a partial match.  Now check the name...
-          local curLink = GetContainerItemLink(i, j);
-          local curName = self:SplitLink(curLink);
-          if name == curName then
-            if link == nil then
-              -- It's our first match--make a note of it.
-              link = self:RemoveUniqueId(curLink);
-              container = i;
-              slot = j;
-            else
-              -- Ambiguous result.  Bail!
-              return;
+        local info = C_Container.GetContainerItemInfo(bag, j);
+        if info then
+          if count == info.stackCount and info.isLocked then
+            -- We've found a partial match.  Now check the name...
+            local curLink = C_Container.GetContainerItemLink(bag, j);
+            local curName = self:SplitLink(curLink);
+            if name == curName then
+              if link == nil then
+                -- It's our first match--make a note of it.
+                link = self:RemoveUniqueId(curLink);
+                container = bag;
+                slot = j;
+              else
+                -- Ambiguous result.  Bail!
+                return;
+              end
             end
           end
         end
