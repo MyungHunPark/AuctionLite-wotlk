@@ -2,7 +2,7 @@
 
 Unofficial fork of AuctionLite-classic addon for World of Warcraft classic. 
 
-origin repo : [https://gitlab.com/Albirew/AuctionLite-classic/]
+origin repo : https://gitlab.com/Albirew/AuctionLite-classic/
 
 ![Featured Image](screenshot.jpg)
 
@@ -11,21 +11,21 @@ origin repo : [https://gitlab.com/Albirew/AuctionLite-classic/]
 
 AuctionLite makes it easy to use the auction house!
 
-*     **Buy**
- *         Show all listings for an item on a single page, sorted by per-item price
- *         Buy out multiple listings at the same time
- *         Search for your favorite items with a single click 
+* **Buy**
+  * Show all listings for an item on a single page, sorted by per-item price
+  * Buy out multiple listings at the same time
+  * Search for your favorite items with a single click 
  
-*     **Sell**
- *         Suggest prices based on the current competition
- *         Create multiple listings at the same time 
+* **Sell**
+  * Suggest prices based on the current competition
+  * Create multiple listings at the same time 
 
-*     **Scan**
- *         Download all auction house data in just seconds
- *         Track historical prices and find deals 
+* **Scan**
+  * Download all auction house data in just seconds
+  * Track historical prices and find deals 
 
-*     **Tooltips**
- *         Show vendor, auction, and disenchant prices on all items 
+* **Tooltips**
+  * Show vendor, auction, and disenchant prices on all items 
 
 In short, AuctionLite tries to make the most common auction house tasks as simple as possible, and AuctionLite strives for minimal overhead and clutter in its interface.
 
@@ -132,12 +132,12 @@ Thanks to mysticalos, kolenka, phanx, inexstinctus, vebev, and haghala for contr
 
 Many, many thanks to the folks who took the time to translate AuctionLite to other languages!
 
-*     Brazilian Portuguese: phalk, renanwar
-*     French: Pettigrow, FreakyGreaser
-*     German: nesta666, Farook, archiv, callmechris, tholas1234, hero66
-*     Italian: _YuSaKu_, kappesante
-*     Korean: eljei, san0713, kdw112, maknae, netaras, Sayclub, ohmytrance
-*     Russian: Vampik, RustamIrzaev, StingerSoft, aperionfag, KVVV
-*     Simplified Chinese: tnt2ray, wowuicn, dh0000
-*     Spanish: karrash76, virginc
-*     Traditional Chinese: tnt2ray, a9012456, s8095324, zhTW 
+* Brazilian Portuguese: phalk, renanwar
+* French: Pettigrow, FreakyGreaser
+* German: nesta666, Farook, archiv, callmechris, tholas1234, hero66
+* Italian: _YuSaKu_, kappesante
+* Korean: eljei, san0713, kdw112, maknae, netaras, Sayclub, ohmytrance
+* Russian: Vampik, RustamIrzaev, StingerSoft, aperionfag, KVVV
+* Simplified Chinese: tnt2ray, wowuicn, dh0000
+* Spanish: karrash76, virginc
+* Traditional Chinese: tnt2ray, a9012456, s8095324, zhTW 
